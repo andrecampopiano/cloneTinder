@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import GoogleSignIn
+import TwitterKit
 
 class ViewController: UIViewController,FBSDKLoginButtonDelegate,GIDSignInUIDelegate {
     
@@ -22,7 +23,18 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate,GIDSignInUIDeleg
         
         setupBtnFBcustom()
         setupBtnGoogle()
+        setupBtnTwitter()
+        
     }
+    
+    fileprivate func setupBtnTwitter(){
+        
+        let twitterButton = TwitterConnect().createCustomBtnTwitterLogin()
+        twitterButton.frame = CGRect(x: 16 , y: 304, width: self.view.frame.size.width - 32 , height: 50)
+        view.addSubview(twitterButton)
+        
+    }
+    
     
     fileprivate func setupBtnGoogle(){
         

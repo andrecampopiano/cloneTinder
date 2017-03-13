@@ -17,6 +17,7 @@
 		9475891B1E72EF4B0078365B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9475891A1E72EF4B0078365B /* Assets.xcassets */; };
 		9475891E1E72EF4B0078365B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9475891C1E72EF4B0078365B /* LaunchScreen.storyboard */; };
 		947589261E72FED20078365B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 947589251E72FED20078365B /* GoogleService-Info.plist */; };
+		947589381E76C2E00078365B /* TwitterConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947589371E76C2E00078365B /* TwitterConnect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9475891D1E72EF4B0078365B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9475891F1E72EF4B0078365B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947589251E72FED20078365B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		947589371E76C2E00078365B /* TwitterConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterConnect.swift; sourceTree = "<group>"; };
 		D1C40E3A21C7FA8748A10D7A /* Pods_CloneTinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneTinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			children = (
 				6EF8A3041E757C6E0025E4E3 /* FBConnect.swift */,
 				6EF8A3061E757E460025E4E3 /* FIbaseAuth.swift */,
+				947589371E76C2E00078365B /* TwitterConnect.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -123,6 +126,8 @@
 				9475890B1E72EF4B0078365B /* Resources */,
 				F63EAAC0D9F334E22E98C8AC /* [CP] Embed Pods Frameworks */,
 				BFFF9FCE531417E4FE6F0378 /* [CP] Copy Pods Resources */,
+				947589361E76BC490078365B /* ShellScript */,
+				947589391E76E2E40078365B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -200,8 +205,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		947589361E76BC490078365B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" e3b73bf5d8dc99d11021f72b9d83c3554d1a0501 08c193a73db6bf7047bc2f948893d83855a85081e1debd4d831f8c1d6995db1d";
+		};
+		947589391E76E2E40078365B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" e3b73bf5d8dc99d11021f72b9d83c3554d1a0501 08c193a73db6bf7047bc2f948893d83855a85081e1debd4d831f8c1d6995db1d";
 		};
 		BFFF9FCE531417E4FE6F0378 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -242,6 +273,7 @@
 			files = (
 				6EF8A3051E757C6E0025E4E3 /* FBConnect.swift in Sources */,
 				947589131E72EF4B0078365B /* ViewController.swift in Sources */,
+				947589381E76C2E00078365B /* TwitterConnect.swift in Sources */,
 				947589191E72EF4B0078365B /* CloneTinder.xcdatamodeld in Sources */,
 				947589111E72EF4B0078365B /* AppDelegate.swift in Sources */,
 				6EF8A3071E757E460025E4E3 /* FIbaseAuth.swift in Sources */,

@@ -14,7 +14,7 @@ class FBConnect: NSObject {
     func showEmailAddress(){
         //Autenticar no FireBase pelo facebook
         let fibaseAuth = FIbaseAuth()
-        fibaseAuth.autenticatWithFacebook(accesstoken: FBSDKAccessToken.current())
+        fibaseAuth.authenticateWithFacebook(accesstoken: FBSDKAccessToken.current())
         FBSDKGraphRequest(graphPath: "/me?", parameters: ["fields":"email, id, name, birthday"]).start(completionHandler: { (connection, result, error) in
             
             if let err = error{

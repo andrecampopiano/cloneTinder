@@ -10,6 +10,11 @@ target ‘CloneTinder’ do
     pod ‘FBSDKShareKit’
     pod ‘FBSDKLoginKit’
     workspace ‘CloneTinder.xcworkspace'
+    pod ‘Fabric’
+    pod ’TwitterKit’
+    pod 'Digits'
+    pod 'TwitterCore'
+    
 
 use_frameworks!
 end
