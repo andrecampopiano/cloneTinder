@@ -5,10 +5,10 @@ target ‘CloneTinder’ do
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
-    pod 'FacebookCore'
-    pod 'FacebookLogin’
-    pod ‘FacebookShare’	
-    
+    pod 'GoogleSignIn'
+    pod ‘FBSDKCoreKit’
+    pod ‘FBSDKShareKit’
+    pod ‘FBSDKLoginKit’
     workspace ‘CloneTinder.xcworkspace'
 
 use_frameworks!

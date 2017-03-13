@@ -20,29 +20,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj2-He-cBl" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="87.5" y="320.5" width="200" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="1nj-GE-7TK"/>
-                                    <constraint firstAttribute="width" constant="200" id="qoN-Ur-Pq4"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.36078431370000003" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="gj2-He-cBl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pwo-ka-9GS"/>
-                            <constraint firstItem="gj2-He-cBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xjs-0P-NwY"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="loginButton" destination="gj2-He-cBl" id="FlT-ss-2CD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
