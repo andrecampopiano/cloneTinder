@@ -22,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         
+        window = UIWindow(frame: UIScren.mainScreen().bounds)
+        window?.makeKeyAndVisible()
+        
+        let layout = UICollectionViewFlowLayout()
+        window?.rootViewController = UINavigationController(rootViewController: YoutubeViewController(collectionViewLayout: layout))
+        
+        
+        
+        
         Fabric.with([Twitter.self])
         
         FIRApp.configure()
