@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         
-        window = UIWindow(frame: UIScren.mainScreen().bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
         let layout = UICollectionViewFlowLayout()
