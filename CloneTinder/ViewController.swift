@@ -71,7 +71,7 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate,GIDSignInUIDeleg
         
         // customizar botao do fb login
         let customFbButton = UIButton()
-        customFbButton.backgroundColor = .blue
+        customFbButton.backgroundColor = UIColor.blue
         customFbButton.frame = CGRect(x: 16 , y: 116, width: self.view.frame.size.width - 32 , height: 50)
         customFbButton.setTitle("Login Facebook", for: .normal)
         customFbButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
