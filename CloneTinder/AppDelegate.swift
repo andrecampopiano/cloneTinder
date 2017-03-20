@@ -25,27 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        
-        let layout = UICollectionViewFlowLayout()
-        window?.rootViewController = UINavigationController(rootViewController: YoutubeViewController(collectionViewLayout: layout))
-        
-        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230,green: 32,blue: 31)
-        application.statusBarStyle = .lightContent
-        
-        //Retira o sombra do navBar
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
-        let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194,green: 31,blue: 31)
-        
-        window?.addSubview(statusBarBackgroundView)
-        window?.addConstraintWithFormat(formart: "H:|[v0]|", views: statusBarBackgroundView)
-        window?.addConstraintWithFormat(formart: "V:[v0(20)]", views: statusBarBackgroundView)
-        
         Fabric.with([Twitter.self])
         
         FIRApp.configure()
